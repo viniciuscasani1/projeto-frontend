@@ -1,23 +1,24 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class OrdemService{
+export class OrdemService {
 
-    constructor(private http: HttpClient) {
-    }
+  url = environment.api_path + '/ordem';
 
-    url = 'http://localhost:8080/api/ordem';
+  constructor(private http: HttpClient) {
+  }
 
-    getAll(): Observable<any> {
-        return this.http.get(this.url);
-    }
+  getAll(): Observable<any> {
+    return this.http.get(this.url);
+  }
 
-    create(ordem) {
-        console.log(ordem);
-        return this.http.post(this.url, ordem);
-    }
+  create(ordem) {
+    console.log(ordem);
+    return this.http.post(this.url, ordem);
+  }
 }

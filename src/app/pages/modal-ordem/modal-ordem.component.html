@@ -8,7 +8,7 @@
       <input tabindex="27" id="descricao" formControlName="descricaoOrdem" type="text"
              [ngClass]="{ 'is-invalid': form.controls['descricaoOrdem'].invalid && submitted }"
              class="input-border input-pesquisa-produto form-control">
-      <div *ngIf="form.controls['descricaoOrdem'].invalid && submitted" class="invalid-feedback" style="margin-bottom: -23px">
+      <div *ngIf="form.controls['descricaoOrdem'].invalid && submitted" class="invalid-feedback invalid-margin">
         <div
           *ngIf="form.controls['descricaoOrdem'].errors.required">
           Descrição é obrigatório
@@ -20,7 +20,7 @@
       <input tabindex="27" id="valor" formControlName="valorOrdem" type="number"
              [ngClass]="{ 'is-invalid': form.controls['valorOrdem'].invalid && submitted }"
              class="input-border input-pesquisa-produto form-control" min="0">
-      <div *ngIf="form.controls['valorOrdem'].invalid && submitted" class="invalid-feedback" style="margin-bottom: -23px">
+      <div *ngIf="form.controls['valorOrdem'].invalid && submitted" class="invalid-feedback invalid-margin">
         <div
           *ngIf="form.controls['valorOrdem'].errors.required">
           Valor da ordem é obrigatório
