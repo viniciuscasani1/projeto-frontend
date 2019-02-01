@@ -7,7 +7,7 @@ import {OrdemService} from '../../providers/ordem.service';
 @Component({
   selector: 'app-ordem',
   templateUrl: './ordem.component.html',
-  styleUrls: ['./ordem.component.css']
+  styleUrls: ['./ordem.component.scss']
 })
 export class OrdemComponent implements OnInit {
 

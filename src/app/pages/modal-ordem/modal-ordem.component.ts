@@ -7,7 +7,7 @@ import {OrdemService} from '../../providers/ordem.service';
 @Component({
   selector: 'app-modal-ordem',
   templateUrl: './modal-ordem.component.html',
-  styleUrls: ['./modal-ordem.component.css']
+  styleUrls: ['./modal-ordem.component.scss']
 })
 export class ModalOrdemComponent implements OnInit {
 
