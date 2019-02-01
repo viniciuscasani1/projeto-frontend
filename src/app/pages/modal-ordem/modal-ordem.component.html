@@ -1,0 +1,40 @@
+<div id="modalImpostos">
+  <div mat-dialog-title class="font-weight-bold font-18 div-titulo-modal">
+    <label id="dsTitulo" class="lbl-titulo">Ordem</label>
+  </div>
+  <div mat-dialog-content [formGroup]="form" class="div-body-modal">
+    <div>
+      <label class="font-weight-bold">Descrição Ordem</label>
+      <input tabindex="27" id="descricao" formControlName="descricaoOrdem" type="text"
+             [ngClass]="{ 'is-invalid': form.controls['descricaoOrdem'].invalid && submitted }"
+             class="input-border input-pesquisa-produto form-control">
+      <div *ngIf="form.controls['descricaoOrdem'].invalid && submitted" class="invalid-feedback" style="margin-bottom: -23px">
+        <div
+          *ngIf="form.controls['descricaoOrdem'].errors.required">
+          Descrição é obrigatório
+        </div>
+      </div>
+    </div>
+    <div class="margin-top-24">
+      <label class="font-12 font-weight-bold">Valor Ordem</label>
+      <input tabindex="27" id="valor" formControlName="valorOrdem" type="number"
+             [ngClass]="{ 'is-invalid': form.controls['valorOrdem'].invalid && submitted }"
+             class="input-border input-pesquisa-produto form-control" min="0">
+      <div *ngIf="form.controls['valorOrdem'].invalid && submitted" class="invalid-feedback" style="margin-bottom: -23px">
+        <div
+          *ngIf="form.controls['valorOrdem'].errors.required">
+          Valor da ordem é obrigatório
+        </div>
+        <div
+          *ngIf="form.controls['valorOrdem'].errors.min">
+          Valor da ordem inválido
+        </div>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions class="div-buttons">
+    <div>
+      <button id="btnSalvar" class="btn-salvar btn font-weight-bold" (click)="insertOrdem()">Salvar</button>
+    </div>
+  </div>
+</div>

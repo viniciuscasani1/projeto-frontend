@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  front:
+    container_name: projeto-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+    - .:/usr/src/app
+    - /usr/src/app/node_modules
+    ports:
+    - 4200:4200
