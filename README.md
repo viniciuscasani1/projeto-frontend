@@ -1,6 +1,6 @@
 # ProjetoFront
 
-Este projeto foi desenvolvido para o Desafio passado pelo Kepha
+Este projeto foi desenvolvido para o Desafio
 
 ## Build
 
